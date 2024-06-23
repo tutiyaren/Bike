@@ -41,4 +41,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Profileリレーション
+    public function profile()
+    {
+        $this->hasOne(Profile::class, 'user_id');
+    }
+
+    // Contactリレーション
+    public function contacts()
+    {
+        $this->hasMany(Contact::class, 'user_id');
+    }
 }

@@ -14,5 +14,25 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        $this->call(UsersTableSeeder::class);
+        $this->call(GendersTableSeeder::class);
+        $this->call(AgesTableSeeder::class);
+        $this->call(ProfilesTableSeeder::class);
+        $this->call(Profile_ImagesTableSeeder::class);
+        $this->call(ContactsTableSeeder::class);
+        $this->call(TweetsTableSeeder::class);
+        $this->call(Profile_Tweet_FavoritesTableSeeder::class);
+        $this->call(DaysTableSeeder::class);
+        $this->call(DistancesTableSeeder::class);
+        $this->call(TouringsTableSeeder::class);
+        $this->call(CommentsTableSeeder::class);
+        $this->call(Profile_Touring_FavoritesTableSeeder::class);
+        $this->call(RepliesTableSeeder::class);
+        $this->call(AreasTableSeeder::class);
+        $this->call(Food_GenresTableSeeder::class);
+        $this->call(Scenery_GenresTableSeeder::class);
+        $this->call(Food_Scenery_PostsTableSeeder::class);
+        $this->call(PostsTableSeeder::class);
+        $this->call(Another_ImagesTableSeeder::class);
     }
 }
