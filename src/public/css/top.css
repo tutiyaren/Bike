@@ -1,0 +1,116 @@
+.top-main {
+    margin: 6% 0;
+}
+.menu-cards {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10%;
+    align-items: center;
+}
+/* それぞれのカード */
+.menu-card:not(:last-child) {
+    border: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    padding: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.menu-card__link {
+    font-size: max(1vw, 15px);
+    text-decoration: none;
+    display: inline-block;
+    color: #15fe21bf;
+    letter-spacing: 3px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+.menu-card__link:hover {
+    color: #c8ff00;
+}
+/* 画像ら */
+.menu-card:nth-child(1) {
+    background-image: url('/storage/tree.jpg');
+}
+.menu-card:nth-child(2) {
+    background-image: url('/storage/fuji.jpg');
+}
+.menu-card:nth-child(3) {
+    background-image: url('/storage/ha-re-.jpg');
+}
+.menu-card:nth-child(4) {
+    background-image: url('/storage/face.jpg');
+}
+.menu-card:nth-child(5) {
+    background-image: url('/storage/touring.jpg');
+}
+.menu-card__food {
+    background-image: url('/storage/eating.jpg');
+}
+.menu-card__scenery {
+    background-image: url('/storage/liver.jpg');
+}
+/* おすすめのところ */
+.menu-card__recommendations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-card__favorite {
+    padding: 1%;
+    text-align: center;
+    width: 100%;
+}
+.menu-card__item {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border: none;
+}
+.menu-card__food,
+.menu-card__scenery {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 12%;
+}
+.menu-card__title {
+    font-size: max(1vw, 20px);
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 651px) {
+    .top-main {
+        margin: 10% 0;
+    }
+    .menu-cards {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5%;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .menu-card:not(:last-child) {
+        padding: 15%;
+    }
+    .menu-cards {
+        width: 70%;
+        gap: 10%;
+    }
+    .menu-card__food,
+    .menu-card__scenery {
+        padding: 7%;
+    }
+}
+
