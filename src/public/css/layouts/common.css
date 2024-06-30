@@ -1,0 +1,147 @@
+body {
+    padding: 0;
+    margin: 0;
+    max-width: 1500px;
+    background-color: #a5a5a5;
+    font-family: Arial, sans-serif;
+}
+/* header */
+.header {
+    display: flex;
+    align-items: center;
+}
+/* アプリタイトル */
+.header-title {
+    font-size: max(2.8vw, 30px);
+    margin-left: 5%;
+    text-shadow: 2px 2px 3px #04a1f0;
+}
+.topPage-link {
+    text-decoration: none;
+    color: #fe7e15;
+    cursor: pointer;
+}
+
+/* ドロワーメニュー */
+.drawerMenu-button {
+    display: block;
+    position: fixed;
+    top: 3%;
+    left: 90%;
+    cursor: pointer;
+    z-index: 2;
+}
+.drawerMenu-bar {
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 25% 0;
+    background-color: #cd6613;
+    transition: 0.5s;
+}
+.drawerMenu-toggle:checked ~ .drawerMenu-button .drawerMenu-bar:nth-child(1) {
+    transform: rotate(45deg) translate(-2px, 13px);
+    background-color: #747474;
+}
+.drawerMenu-toggle:checked ~ .drawerMenu-button .drawerMenu-bar:nth-child(2) {
+    opacity: 0;
+}
+.drawerMenu-toggle:checked ~ .drawerMenu-button .drawerMenu-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -23px);
+    background-color: #747474;
+}
+.drawerMenu-toggle {
+    display: none;
+}
+.drawerMenu-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(188, 188, 188);
+    transition: 0.5s;
+    overflow-y: auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.drawerMenu-toggle:checked ~ .drawerMenu-nav {
+    left: 0;
+}
+.drawerMenu-ul {
+    list-style: none;
+    padding: 3%;
+    text-align: center;
+}
+.drawerMenu-link {
+    text-decoration: none;
+    color: #ff8b2c;
+    font-size: max(1.4vw, 15px);
+    display: block;
+    padding: 1% 0;
+    transition: 1s;
+    font-weight: bold;
+    display: inline-block;
+}
+.drawerMenu-link:hover {
+    color: #148fc9;
+}
+/* フッター */
+.footer-myname {
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    color: orange;
+    text-shadow: 2px 2px 1px #04a1f0;
+    font-size: max(1.3vw, 14px);
+}
+
+@media screen and (max-width: 868px) {
+    .drawerMenu-link {
+        padding: 2% 0;
+    }
+}
+
+@media screen and (max-width: 651px) {
+	.drawerMenu-button {
+        left: 85%;
+        top: 2%;
+    }
+    .drawerMenu-bar {
+        width: 45px;
+    }
+    .drawerMenu-toggle:checked ~ .drawerMenu-button .drawerMenu-bar:nth-child(1) {
+        transform: rotate(45deg) translate(-2px, 12px);
+    }
+    .drawerMenu-toggle:checked ~ .drawerMenu-button .drawerMenu-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -22px);
+    }
+    .drawerMenu-link {
+        padding: 3% 0;
+    }
+    .footer {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 481px) {
+	.drawerMenu-button {
+        left: 80%;
+        top: 2%;
+    }
+    .drawerMenu-bar {
+        width: 40px;
+    }
+    .drawerMenu-toggle:checked ~ .drawerMenu-button .drawerMenu-bar:nth-child(1) {
+        transform: rotate(45deg) translate(-2px, 10px);
+    }
+    .drawerMenu-toggle:checked ~ .drawerMenu-button .drawerMenu-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -20px);
+    }
+    .footer {
+        margin-top: 50%;
+    }
+}
+
