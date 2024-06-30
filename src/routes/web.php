@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TopController;
+use App\Http\Controllers\UserAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,18 @@ use App\Http\Controllers\TopController;
 |
 */
 
+
+// 認証
+Route::get('/auth/login', [UserAuthController::class, 'login'])->name('login');
+Route::post('/auth/login/process', [UserAuthController::class, 'loginProcess'])->name('login.process');
+Route::group(['middleware' => 'clear.session'], function () {
+    Route::get('/auth/register', [UserAuthController::class, 'register'])->name('register');
+    Route::post('/auth/register/process', [UserAuthController::class, 'registerProcess'])->name('register.process');
+    Route::get('/auth/register-ps', [UserAuthController::class, 'password'])->name('password');
+    Route::post('/auth/register-ps/process', [UserAuthController::class, 'passwordProcess'])->name('password.process');
+});
+Route::post('/auth/logout', [UserAuthController::class, 'logout'])->name('logout');
+
+// トップページ
 Route::get('/', [TopController::class, 'index'])->name('top');
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });

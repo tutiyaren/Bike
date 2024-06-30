@@ -29,6 +29,7 @@
     letter-spacing: 3px;
     transition: 0.8s;
     cursor: pointer;
+    padding: 3% 5%;
 }
 .menu-card__link:hover {
     color: #c8ff00;
@@ -36,24 +37,54 @@
 /* 画像ら */
 .menu-card:nth-child(1) {
     background-image: url('/storage/tree.jpg');
+    border-radius: 20%;
 }
 .menu-card:nth-child(2) {
     background-image: url('/storage/fuji.jpg');
+    clip-path: circle(50% at 50% 50%);
 }
 .menu-card:nth-child(3) {
     background-image: url('/storage/ha-re-.jpg');
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        80% 90%,
+        20% 90%
+    );
 }
 .menu-card:nth-child(4) {
     background-image: url('/storage/face.jpg');
+    clip-path: inset(5% 8% 10% 0 round 70% 0);
 }
 .menu-card:nth-child(5) {
     background-image: url('/storage/touring.jpg');
+    clip-path: inset(10% 3% 7% 0 round 5% 20%);
 }
 .menu-card__food {
     background-image: url('/storage/eating.jpg');
+    clip-path: polygon(
+        0 0,
+        85% 0,
+        85% 35%,
+        100% 35%,
+        100% 65%,
+        85% 65%,
+        85% 100%,
+        0 100%
+    );
 }
 .menu-card__scenery {
     background-image: url('/storage/liver.jpg');
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 65%,
+        15% 65%,
+        15% 35%,
+        0 35%
+    );
 }
 /* おすすめのところ */
 .menu-card__recommendations {

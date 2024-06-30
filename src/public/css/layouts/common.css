@@ -75,7 +75,8 @@ body {
     padding: 3%;
     text-align: center;
 }
-.drawerMenu-link {
+.drawerMenu-link,
+.logout-button {
     text-decoration: none;
     color: #ff8b2c;
     font-size: max(1.4vw, 15px);
@@ -85,7 +86,12 @@ body {
     font-weight: bold;
     display: inline-block;
 }
-.drawerMenu-link:hover {
+.logout-button {
+    border: none;
+    background-color: rgb(188, 188, 188);
+}
+.drawerMenu-link:hover,
+.logout-button:hover {
     color: #148fc9;
 }
 /* フッター */
