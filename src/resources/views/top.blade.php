@@ -13,7 +13,7 @@
         <!-- バイフとは -->
         <section class="menu-card">
             <h2 class="menu-card__title">
-                <a href="#" class="menu-card__link">What is バイフ？</a>
+                <a href="{{ route('know.app') }}" class="menu-card__link">What is バイフ？</a>
             </h2>
         </section>
 
