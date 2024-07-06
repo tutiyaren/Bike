@@ -1,0 +1,127 @@
+.confirmation-main {
+    margin: 4% auto;
+    width: 80%;
+}
+.confirmation-title {
+    width: 100%;
+    text-align: center;
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #04a1f0;
+    font-size: max(2.5vw, 25px);
+    letter-spacing: 10px;
+    margin-bottom: 8%;
+}
+.wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+/* ログインフォーム */
+.confirmation-form {
+    margin-bottom: 8%;
+}
+.confirmationTop-title,
+.confirmationTop-comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 8%;
+}
+.label-title,
+.label-comment {
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #04a1f0;
+    font-size: max(1.5vw, 17px);
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+.title-input,
+.comment-textarea {
+    margin-bottom: 3%;
+    font-size: max(1.7vw, 18px);
+    padding: 2% 3%;
+    background-color: #b2b2b2;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    letter-spacing: 3px;
+    color: #787878;
+}
+.comment-textarea {
+    padding: 3% 4%;
+    line-height: 130%;
+}
+.error {
+    color: rgb(253, 13, 13);
+    font-weight: bold;
+    text-shadow: 3px 3px 3px rgb(249, 84, 84);
+    font-size: max(1.4vw, 12px);
+}
+.title-input::placeholder,
+.comment-textarea::placeholder {
+    color: #787878;
+}
+.confirmation-button {
+    margin-top: 3%;
+    text-align: center;
+}
+.button-submit {
+    border: none;
+    background-color: #a5a5a5;
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #d7d7d7;
+    font-size: max(1.5vw, 17px);
+    letter-spacing: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button-submit:hover {
+    text-shadow: 3px 3px 10px #ffffff;
+}
+/* 入力し直す */
+.confirmation-move {
+    text-align: center;
+}
+.confirmation-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #d7d7d7;
+    font-size: max(1.3vw, 15px);
+    letter-spacing: 5px;
+    transition: 0.3s;
+}
+.confirmation-link:hover {
+    text-shadow: 2px 2px 7px #ffffff;
+}
+
+@media screen and (max-width: 786px) {
+    .confirmation-main {
+        margin: 6% auto;
+        width: 90%;
+    }
+    .wrapper {
+        width: 80%;
+    }
+    .confirmationTop-title,
+    .confirmationTop-comment {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .confirmation-main {
+        margin: 8% auto;
+        width: 100%;
+    }
+    .wrapper {
+        width: 95%;
+    }
+    .confirmationTop-title,
+    .confirmationTop-comment {
+        width: 80%;
+    }
+}

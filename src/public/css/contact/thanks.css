@@ -1,0 +1,43 @@
+.thanks-main {
+    margin: 15% auto;
+    width: 80%;
+}
+.thanks-title {
+    width: 100%;
+    text-align: center;
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #04a1f0;
+    font-size: max(2.5vw, 15px);
+    letter-spacing: 10px;
+    margin-bottom: 8%;
+}
+/* 画面タイトルへ遷移 */
+.thanks-move {
+    text-align: center;
+}
+.thanks-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #d7d7d7;
+    font-size: max(1.3vw, 15px);
+    letter-spacing: 5px;
+    transition: 0.3s;
+}
+.thanks-link:hover {
+    text-shadow: 2px 2px 7px #ffffff;
+}
+
+@media screen and (max-width: 786px) {
+    .thanks-main {
+        margin: 24% auto;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .thanks-main {
+        margin: 32% auto;
+        width: 100%;
+    }
+}
