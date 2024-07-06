@@ -10,4 +10,9 @@ class TopController extends Controller
     {
         return view('top');
     }
+
+    public function knowApp()
+    {
+        return view('know_app');
+    }
 }
