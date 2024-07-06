@@ -29,4 +29,6 @@ Route::post('/auth/logout', [UserAuthController::class, 'logout'])->name('logout
 
 // トップページ
 Route::get('/', [TopController::class, 'index'])->name('top');
+// What is バイフページ
+Route::get('/know_app', [TopController::class, 'knowApp'])->name('know.app');
 

@@ -26,7 +26,7 @@
                     @guest
                     <li class="drawerMenu-li"><a href="{{ route('login') }}" class="drawerMenu-link">Login</a></li>
                     @endguest
-                    <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">What is バイフ？</a></li>
+                    <li class="drawerMenu-li"><a href="{{ route('know.app') }}" class="drawerMenu-link">What is バイフ？</a></li>
                     <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">プロフィール</a></li>
                     <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">My Page</a></li>
                     <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">つぶやきのバイク</a></li>
@@ -66,6 +66,7 @@
 
     </footer>
 
+    @yield('js')
 </body>
 
 </html>

@@ -1,0 +1,119 @@
+.know-main {
+    margin: 6% auto 30%;
+    width: 80%;
+    position: relative;
+}
+.know-inner {
+    position: relative;
+    margin-bottom: 5%;
+}
+.know-app {
+    position: relative;
+    margin-top: 30%;
+}
+.know-inner,
+.know-app {
+    background-color: #dedede;
+    width: 60%;
+    padding: 5%;
+    box-shadow: 3px 3px 5px #fe7e15;
+    z-index: 3;
+}
+.know-title {
+    font-size: max(2vw, 20px);
+    letter-spacing: 8px;
+    text-align: center;
+    color: #fe7e15;
+    text-shadow: 1px 1px 2px #04a1f0;
+}
+.know-inner__life,
+.know-app__app,
+.know-app__lastMessage,
+.know-app__bye {
+    font-size: max(1.4vw, 16px);
+    letter-spacing: 7px;
+    line-height: 175%;
+    font-weight: bold;
+    color: #676767;
+    text-shadow: 2px 2px 3px #bababa;
+    opacity: 0;
+    transform: translateY(40%);
+    transition: opacity 3s ease-out, transform 3s ease-out;
+}
+.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.know-image {
+    position: absolute; 
+    top: 25%;
+    left: 40%; 
+    z-index: 2;
+}
+.know-image__bike, 
+.app-image__bike {
+    width: 120%;
+    height: auto;
+}
+.app-image {
+    position: absolute; 
+    top: 90%; 
+    left: 40%;
+    z-index: 2;
+}
+
+@media screen and (max-width: 786px) {
+    .know-main {
+        margin: 6% auto 40%;
+    }
+    .know-inner,
+    .know-app {
+        width: 70%;
+    }
+    .know-app {
+        margin-top: 40%;
+    }
+    .know-image {
+        top: 35%;
+    }
+    .app-image {
+        top: 95%; 
+    }
+}
+@media screen and (max-width: 521px) {
+    .know-main {
+        margin: 6% auto 50%;
+    }
+    .know-inner,
+    .know-app {
+        width: 90%;
+    }
+    .know-app {
+        margin-top: 50%;
+    }
+    .know-image {
+        top: 36%;
+    }
+    .app-image {
+        top: 98%; 
+    }
+}
+@media screen and (max-width: 428px) {
+    .know-main {
+        margin: 6% auto 55%;
+    }
+    .know-inner,
+    .know-app {
+        width: 95%;
+    }
+    .know-app {
+        margin-top: 60%;
+    }
+    .know-image {
+        top: 40%;
+    }
+    .app-image {
+        top: 98%; 
+    }
+}
