@@ -16,6 +16,6 @@ class Day extends Model
     // Touringリレーション
     public function touring()
     {
-        $this->hasOne(Touring::class, 'day_id');
+        return $this->hasOne(Touring::class, 'day_id');
     }
 }

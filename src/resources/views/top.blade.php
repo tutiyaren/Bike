@@ -20,7 +20,7 @@
         <!-- プロフィール -->
         <section class="menu-card">
             <h2 class="menu-card__title">
-                <a href="#" class="menu-card__link">プロフィール</a>
+                <a href="{{ route('profile') }}" class="menu-card__link">プロフィール</a>
             </h2>
         </section>
 

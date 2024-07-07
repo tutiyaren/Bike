@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TopController;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,9 @@ Route::post('/auth/logout', [UserAuthController::class, 'logout'])->name('logout
 Route::get('/', [TopController::class, 'index'])->name('top');
 // What is バイフページ
 Route::get('/know_app', [TopController::class, 'knowApp'])->name('know.app');
+// プロフィールページ
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::post('/profile/store', [ProfileController::class, 'store'])->name('profile.store');
 
 // お問い合わせ
 Route::group(['middleware' => 'clear.contact.session'], function () {

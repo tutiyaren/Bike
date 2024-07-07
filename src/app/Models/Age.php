@@ -16,6 +16,6 @@ class Age extends Model
     // Profileリレーション
     public function profile()
     {
-        $this->hasOne(Profile::class, 'age_id');
+        return $this->hasOne(Profile::class, 'age_id');
     }
 }

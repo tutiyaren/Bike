@@ -16,6 +16,6 @@ class Gender extends Model
     // Profileリレーション
     public function profile()
     {
-        $this->hasOne(Profile::class, 'gender_id');
+        return $this->hasOne(Profile::class, 'gender_id');
     }
 }

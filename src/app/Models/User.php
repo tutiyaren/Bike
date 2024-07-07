@@ -45,12 +45,12 @@ class User extends Authenticatable
     // Profileリレーション
     public function profile()
     {
-        $this->hasOne(Profile::class, 'user_id');
+        return $this->hasOne(Profile::class, 'user_id');
     }
 
     // Contactリレーション
     public function contacts()
     {
-        $this->hasMany(Contact::class, 'user_id');
+        return $this->hasMany(Contact::class, 'user_id');
     }
 }

@@ -16,6 +16,6 @@ class Distance extends Model
     // Touringリレーション
     public function touring()
     {
-        $this->hasOne(Touring::class, 'distance_id');
+        return $this->hasOne(Touring::class, 'distance_id');
     }
 }

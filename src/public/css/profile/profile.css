@@ -1,0 +1,118 @@
+.profile-main {
+    margin: 6% auto;
+    width: 60%;
+}
+.profile-title {
+    text-align: center;
+    font-size: max(2.5vw, 25px);
+    letter-spacing: 10px;
+    margin-bottom: 5%;
+}
+.profile-description {
+    font-size: max(1.8vw, 18px);
+    letter-spacing: 6px;
+    margin-bottom: 8%;
+}
+.profile-title,
+.profile-description {
+    width: 100%;
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #04a1f0;
+}
+.profile-form {
+    width: 100%;
+}
+.nickname,
+.gender,
+.age {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 8%;
+}
+.gender-title {
+    color: #fe7e15;
+    text-shadow: 1px 1px #04a1f0;
+    font-weight: bold;
+    font-size: max(1.8vw, 18px);
+    margin-bottom: 0;
+}
+.nickname-title,
+.gender-check,
+.age-title {
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #fff;
+    font-weight: bold;
+    font-size: max(1.8vw, 18px);
+    cursor: pointer;
+}
+
+.gender-check {
+    margin-right: 5%;
+    display: inline-block;
+    letter-spacing: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.gender-input {
+    display: none;
+}
+.gender-input:checked + .gender-check {
+    background-color: #bdbdbd;
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #fff;
+}
+
+.nickname-input,
+.age-select {
+    letter-spacing: 3px;
+}
+.gender-check,
+.nickname-input,
+.age-select {
+    font-size: max(1.7vw, 18px);
+    padding: 2% 3%;
+    background-color: #b2b2b2;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: #787878;
+}
+.error {
+    color: rgb(253, 13, 13);
+    font-weight: bold;
+    text-shadow: 3px 3px 3px rgb(249, 84, 84);
+    font-size: max(1.4vw, 12px);
+}
+.button {
+    margin-top: 3%;
+    text-align: center;
+}
+.button-submit {
+    border: none;
+    background-color: #a5a5a5;
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #d7d7d7;
+    font-size: max(1.5vw, 17px);
+    letter-spacing: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button-submit:hover {
+    text-shadow: 3px 3px 10px #ffffff;
+}
+
+@media screen and (max-width: 786px) {
+    .profile-main {
+        margin: 8% auto;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile-main {
+        margin: 10% auto;
+        width: 90%;
+    }
+}

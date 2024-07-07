@@ -20,18 +20,18 @@ class Food_Scenery_Post extends Model
     // Profileリレーション
     public function profile()
     {
-        $this->belongsTo(Profile::class, 'profile_id');
+        return $this->belongsTo(Profile::class, 'profile_id');
     }
 
     // Areaリレーション
     public function area()
     {
-        $this->belongsTo(Area::class, 'area_id');
+        return $this->belongsTo(Area::class, 'area_id');
     }
 
     // Postリレーション
     public function post()
     {
-        $this->hasOne(Post::class, 'post_id');
+        return $this->hasOne(Post::class, 'post_id');
     }
 }

@@ -17,12 +17,12 @@ class Tweet extends Model
     // Profileリレーション
     public function profile()
     {
-        $this->belongsTo(Profile::class, 'profile_id');
+        return $this->belongsTo(Profile::class, 'profile_id');
     }
 
     // Profile_Tweet_Favoriteリレーション
     public function profile_tweet_favorites()
     {
-        $this->hasMany(Profile_Tweet_Favorite::class, 'tweet_id');
+        return $this->hasMany(Profile_Tweet_Favorite::class, 'tweet_id');
     }
 }

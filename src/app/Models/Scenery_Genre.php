@@ -16,6 +16,6 @@ class Scenery_Genre extends Model
     // Postリレーション
     public function Post()
     {
-        $this->hasOne(Post::class);
+        return $this->hasOne(Post::class);
     }
 }
