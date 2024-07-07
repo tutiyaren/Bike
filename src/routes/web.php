@@ -6,6 +6,7 @@ use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +37,15 @@ Route::get('/know_app', [TopController::class, 'knowApp'])->name('know.app');
 // プロフィールページ
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 Route::post('/profile/store', [ProfileController::class, 'store'])->name('profile.store');
+
+// お問い合わせ
+Route::group(['middleware' => 'clear.contact.session'], function () {
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+    Route::post('/contact/confirmation', [ContactController::class, 'confirmation'])->name('contact.confirmation');
+    Route::post('/contact/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
+});
+
+
 
 // お問い合わせ
 Route::group(['middleware' => 'clear.contact.session'], function () {
