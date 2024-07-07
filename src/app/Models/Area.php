@@ -16,6 +16,6 @@ class Area extends Model
     // Food_Scenery_Postリレーション
     public function food_scenery_posts()
     {
-        $this->hasMany(Food_Scenery_Post::class, 'area_id');
+        return $this->hasMany(Food_Scenery_Post::class, 'area_id');
     }
 }

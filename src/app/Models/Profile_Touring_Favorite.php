@@ -17,12 +17,12 @@ class Profile_Touring_Favorite extends Model
     // Profileリレーション
     public function profile()
     {
-        $this->belongsTo(Profile::class, 'profile_id');
+        return $this->belongsTo(Profile::class, 'profile_id');
     }
 
     // Profile_Touring_Favoriteリレーション
     public function touring()
     {
-        $this->belongsTo(Touring::class, 'touring_id');
+        return $this->belongsTo(Touring::class, 'touring_id');
     }
 }

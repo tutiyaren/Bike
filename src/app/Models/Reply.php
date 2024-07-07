@@ -18,12 +18,12 @@ class Reply extends Model
     // Profileリレーション
     public function profile()
     {
-        $this->belongsTo(Profile::class, 'profile_id');
+        return $this->belongsTo(Profile::class, 'profile_id');
     }
 
     // Commentリレーション
     public function comment()
     {
-        $this->belongsTo(Comment::class, 'comment_id');
+        return $this->belongsTo(Comment::class, 'comment_id');
     }
 }

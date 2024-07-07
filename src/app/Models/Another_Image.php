@@ -17,6 +17,6 @@ class Another_Image extends Model
     // Postリレーション
     public function posts()
     {
-        $this->belongsTo(Post::class, 'post_id');
+        return $this->belongsTo(Post::class, 'post_id');
     }
 }

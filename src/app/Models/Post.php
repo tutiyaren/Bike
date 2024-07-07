@@ -18,30 +18,30 @@ class Post extends Model
     // Profileリレーション
     public function profile()
     {
-        $this->belongsTo(Profile::class, 'profile_id');
+        return $this->belongsTo(Profile::class, 'profile_id');
     }
 
     // Food_Scenery_Postリレーション
     public function food_scenery_posts()
     {
-        $this->belongsTo(Food_Scenery_Post::class, 'food_scenery_post_id');
+        return $this->belongsTo(Food_Scenery_Post::class, 'food_scenery_post_id');
     }
 
     // Food_Genreリレーション
     public function food_genre()
     {
-        $this->belongsTo(Food_Genre::class);
+        return $this->belongsTo(Food_Genre::class);
     }
 
     // Scenery_Genreリレーション
     public function scenery_genre()
     {
-        $this->belongsTo(Scenery_Genre::class);
+        return $this->belongsTo(Scenery_Genre::class);
     }
 
     // Another_Imageリレーション
     public function another_images()
     {
-        $this->hasMany(Another_Image::class, 'post_id');
+        return $this->hasMany(Another_Image::class, 'post_id');
     }
 }
