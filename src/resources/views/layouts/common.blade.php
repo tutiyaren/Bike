@@ -66,6 +66,11 @@
 
     </footer>
 
+    <div class="cursor" id="cursor">
+        
+    </div>
+
+    <script src="{{ asset('/js/cursor.js') }}"></script>
     @yield('js')
 </body>
 
