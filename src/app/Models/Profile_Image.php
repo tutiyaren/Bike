@@ -19,4 +19,6 @@ class Profile_Image extends Model
     {
         return $this->belongsTo(Profile::class, 'profile_id');
     }
+
+    protected $table = 'profile_images';
 }

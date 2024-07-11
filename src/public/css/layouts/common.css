@@ -104,6 +104,59 @@ body {
     font-size: max(1.3vw, 14px);
 }
 
+/* カーソル */
+/* .cursor {
+    background-color: #262626;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 999;
+    position: fixed;
+    top: -25px; 
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    transition: transform .2s ease-out;
+    border-radius: 50%;
+}
+.cursor::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    border: 7px solid rgb(255, 166, 0);
+    border-radius: 50%;
+    z-index: 999;
+} */
+
+.cursor {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+    border-radius: 50%;
+    position: fixed;
+    top: -25px;
+    left: -25px;
+    z-index: 999;
+    background-color: #262626;
+}
+
+.cursor::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 7px solid rgb(255, 166, 0);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
 @media screen and (max-width: 868px) {
     .drawerMenu-link {
         padding: 2% 0;
