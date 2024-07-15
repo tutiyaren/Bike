@@ -51,7 +51,3 @@ Route::get('/food/create', [FoodController::class, 'create'])->name('food.create
 Route::post('/food/store', [FoodController::class, 'store'])->name('food.store');
 Route::get('/food/detail', [FoodController::class, 'detail'])->name('food.detail');
 
-
-
-// 検索と、ページネーションを実装
-
