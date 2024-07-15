@@ -76,15 +76,17 @@ class Profile extends Model
         return $this->hasMany(Reply::class, 'profile_id');
     }
 
-    // Food_Scenery_Postリレーション
-    public function food_scenery_posts()
+    // Food_Postリレーション
+    public function food_posts()
     {
-        return $this->hasMany(Food_Scenery_Post::class, 'profile_id');
+        return $this->hasMany(Food_Post::class, 'profile_id');
     }
 
-    // Postリレーション
-    public function posts()
+    // Scenery_Postリレーション
+    public function scenery_posts()
     {
-        return $this->hasMany(Post::class, 'profile_id');
+        return $this->hasMany(Scenery_Post::class, 'profile_id');
     }
+
+    protected $table = 'profiles';
 }

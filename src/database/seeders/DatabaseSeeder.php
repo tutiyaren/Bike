@@ -31,8 +31,10 @@ class DatabaseSeeder extends Seeder
         $this->call(AreasTableSeeder::class);
         $this->call(Food_GenresTableSeeder::class);
         $this->call(Scenery_GenresTableSeeder::class);
-        $this->call(Food_Scenery_PostsTableSeeder::class);
-        $this->call(PostsTableSeeder::class);
-        $this->call(Another_ImagesTableSeeder::class);
+        $this->call(Food_PostsTableSeeder::class);
+        $this->call(Scenery_PostsTableSeeder::class);
+        $this->call(Scenery_PostsTableSeeder::class);
+        $this->call(Food_Another_ImagesTableSeeder::class);
+        $this->call(Scenery_Another_ImagesTableSeeder::class);
     }
 }

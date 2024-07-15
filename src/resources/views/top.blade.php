@@ -55,7 +55,7 @@
             <div class="menu-card__item">
                 <div class="menu-card__food">
                     <h2 class="menu-card__title">
-                        <a href="#" class="menu-card__link">飲食</a>
+                        <a href="{{ route('food.index') }}" class="menu-card__link">飲食</a>
                     </h2>
                 </div>
                 <div class="menu-card__scenery">

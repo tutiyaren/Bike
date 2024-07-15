@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BikeLife</title>
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/layouts/sanitize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/common.css') }}">
     @yield('css')
@@ -31,7 +32,7 @@
                     <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">My Page</a></li>
                     <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">つぶやきのバイク</a></li>
                     <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">マスツーリングへ行こう</a></li>
-                    <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">おすすめの飲食</a></li>
+                    <li class="drawerMenu-li"><a href="{{ route('food.index') }}" class="drawerMenu-link">おすすめの飲食</a></li>
                     <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">おすすめの風景</a></li>
                     <li class="drawerMenu-li"><a href="{{ route('contact') }}" class="drawerMenu-link">お問い合わせ</a></li>
                     @auth
@@ -67,7 +68,7 @@
     </footer>
 
     <div class="cursor" id="cursor">
-        
+
     </div>
 
     <script src="{{ asset('/js/cursor.js') }}"></script>

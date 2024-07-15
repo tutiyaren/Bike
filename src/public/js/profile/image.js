@@ -1,9 +1,8 @@
 const profileImage = document.getElementById('profileImage');
 const fileInput = document.getElementById('fileInput');
-console.log('Hello');
+
 profileImage.addEventListener('click', function() {
     fileInput.click();
-    console.log('Hello');
 });
 
 function previewImage(event) {

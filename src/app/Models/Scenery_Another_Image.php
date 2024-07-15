@@ -5,19 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Scenery_Genre extends Model
+class Scenery_Another_Image extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'genre'
+        'scenery_post_id',
+        'image'
     ];
 
     // Scenery_Postリレーション
     public function scenery_posts()
     {
-        return $this->hasMany(Scenery_Post::class, 'genre_id');
+        return $this->belongsTo(Scenery_Post::class, 'scenery_post_id');
     }
-
-    protected $table = 'scenery_genres';
 }

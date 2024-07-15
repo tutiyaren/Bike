@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAnotherImagesTable extends Migration
+class CreateSceneryAnotherImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateAnotherImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('another_images', function (Blueprint $table) {
+        Schema::create('scenery_another_images', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('post_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('scenery_post_id')->constrained()->cascadeOnDelete();
             $table->string('image')->nullable(false);
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateAnotherImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('another_images');
+        Schema::dropIfExists('scenery_another_images');
     }
 }

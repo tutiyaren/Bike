@@ -13,9 +13,17 @@ class Area extends Model
         'area'
     ];
 
-    // Food_Scenery_Postリレーション
-    public function food_scenery_posts()
+    // Food_Postリレーション
+    public function food_posts()
     {
-        return $this->hasMany(Food_Scenery_Post::class, 'area_id');
+        return $this->hasMany(Food_Post::class, 'area_id');
     }
+
+    // Scenery_Postリレーション
+    public function scenery_posts()
+    {
+        return $this->hasMany(Scenery_Post::class, 'area_id');
+    }
+
+    protected $table = 'areas';
 }

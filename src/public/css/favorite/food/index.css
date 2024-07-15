@@ -1,0 +1,302 @@
+.favorite-main {
+    margin: 5% auto;
+    width: 100%;
+}
+.favorite-create {
+    width: 100%;
+    text-align: right;
+}
+.favorite-create__link {
+    text-decoration: none;
+    display: inline-block;
+    color: #fe7e15;
+    text-shadow: 1px 1px 3px #d7d7d7;
+    font-size: max(1.6vw, 17px);
+    letter-spacing: 5px;
+    transition: 0.3s;
+    margin-right: 10%;
+    font-weight: bold;
+}
+.favorite-create__link:hover {
+    text-shadow: 2px 2px 7px #ffffff;
+}
+.searchSelect {
+    align-items: center;
+    display:flex;
+    justify-content: space-around;
+    margin: 5% auto 2%;
+    width: 60%;
+}
+.searchSelect-area__select,
+.searchSelect-genre__select {
+    cursor: pointer;
+}
+.searchSelect-area__select,
+.searchSelect-genre__select,
+.searchTitle-input {
+    border: none;
+    background-color: #a5a5a5;
+    color: #fe7e15;
+    font-size: max(1.3vw, 13px);
+    letter-spacing: 3px;
+    outline: none;
+    padding: 2% 2%;
+    text-shadow: 2px 2px 5px #d7d7d7;
+}
+.searchTitle {
+    background-color: #a5a5a5;
+    margin: 3% auto 4%;
+    text-align: center;
+    width: 50%;
+}
+.fa-magnifying-glass {
+    color: #fe7e15;
+    text-shadow: 2px 2px 5px #d7d7d7;
+}
+.searchTitle-input {
+    font-size: max(1.4vw, 15px);
+    width: 90%;
+}
+.custor-hr {
+    border: none;
+    height: 4px;
+    background: linear-gradient(to right, #a5a5a5, #fe7e15, #a5a5a5);
+    width: 60%;
+}
+
+.favorite-cards {
+    width: 90%;
+    margin: 1% auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.favorite-card {
+    width: 30%;
+    margin: 2% auto;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #8e8d8d;
+}
+.favorite-card:hover {
+    box-shadow: 2px 2px 8px #d7d7d7;
+    border: 2px solid #d7d7d7;
+}
+.favorite-card__top {
+    width: 100%;
+    height: max(13vw, 20px);
+    overflow: hidden;
+}
+.favorite-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.favorite-card__title {
+    color: #fe7e15;
+    text-shadow: 1px 1px 1px #d7d7d7;
+    font-size: max(1.4vw, 15px);
+    line-height: 130%;
+    letter-spacing: 3px;
+    padding: 3%;
+}
+.pagination-container {
+    text-align: center;
+    margin: 5% auto 0;
+}
+/* モーダル */
+dialog::backdrop {
+    backdrop-filter: blur(2px);
+    background: #42424270;
+}
+.favorite-detail {
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 95%;
+    position: fixed;
+    top: 70%;
+    left: 70%;
+    transform: translate(-70%, -50%);
+    z-index: 1000;
+}
+.dialog-inner {
+    align-items: center;
+    background: #c7c7c7;
+    display: flex;
+    gap: 2%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.detail-photo {
+    flex: 1;
+}
+.detail-photo__image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 40vw;
+    display: none;
+}
+.detail-content {
+    color: #fe7e15;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-weight: bold;
+    padding: 0 1%;
+}
+.detail-content__close {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: max(2.5vw, 20px);
+    margin-bottom: 5%;
+    text-shadow: 1px 1px 3px #fff;
+    transition: 1s;
+}
+.detail-content__close:hover {
+    font-size: max(3vw, 25px);
+}
+.detail-content__info {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+.detail-content__info-area,
+.detail-content__info-genre {
+    font-size: max(1.4vw, 13px);
+    text-shadow: 1px 1px 3px #04a1f0;
+}
+.detail-content__title {
+    font-size: max(1.6vw, 18px);
+    letter-spacing: 3px;
+    margin: 4% 0;
+    text-shadow: 1px 1px 3px #04a1f0;
+}
+.detail-content__text {
+    font-size: max(1.4vw, 13px);
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 8%px;
+    text-shadow: 1px 1px 3px #04a1f0;
+}
+.detail-content__profile {
+    align-items: center;
+    display: flex;
+    margin: 3% auto 0;
+    width: 80%;
+}
+.detail-content__profile-inner {
+    flex: 1;
+}
+.detail-content__profile-inner--image {
+    border-radius: 20px;
+    height: max(11vw, 90px); 
+    object-fit: cover;
+    width: max(12vw, 95px);
+}
+.detail-content__profile-info {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    margin-left: 3%;
+}
+.detail-content__profile-name {
+    font-size: max(1.4vw, 13px);
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px #04a1f0;
+}
+.detail-content__profile-name--other {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+.detail-content__profile-name--other-age,
+.detail-content__profile-name--other-genre {
+    font-size: max(1.2vw, 11px);
+    text-shadow: 1px 1px 3px #04a1f0;
+}
+
+@media screen and (max-width: 836px) {
+    .favorite-main {
+        margin: 6% auto;
+    }
+    .favorite-cards {
+        width: 95%;
+        margin: 2% auto;
+    }
+    .favorite-card {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin: 2% auto;
+        width: 45%;
+    }
+    .favorite-card__top {
+        height: max(17vw, 20px);
+    }
+    .favorite-card__title {
+        padding: 2%;
+    }
+    .searchSelect {
+        margin: 6% auto 4%;
+        width: 75%;
+    }
+    .searchTitle {
+        margin-bottom: 5%;
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 636px) {
+    .dialog-inner {
+        flex-direction: column;
+        padding: 0 0 2%;
+    }
+    .detail-content__close {
+        margin-top: 4%;
+        margin-bottom: 0;
+        padding-right: 3%;
+    }
+    .detail-content__info {
+        margin-top: 0;
+        margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width: 546px) {
+    .favorite-main {
+        margin: 7% auto;
+    }
+    .favorite-cards {
+        width: 100%;
+        margin: 3% auto;
+    }
+    .favorite-card {
+        width: 75%;
+        margin: 4% auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .favorite-card__top {
+        height: max(30vw, 20px);
+    }
+    .favorite-card__title {
+        padding: 1%;
+    }
+    .searchSelect {
+        margin: 7% auto 7%;
+        width: 90%;
+    }
+    .searchTitle {
+        margin-bottom: 7%;
+        width: 80%;
+    }
+}
+
+
+
+
