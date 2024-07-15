@@ -5,6 +5,7 @@ use App\Http\Controllers\TopController;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FoodController;
 
 
 /*
@@ -45,7 +46,11 @@ Route::group(['middleware' => 'clear.contact.session'], function () {
     Route::post('/contact/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
 });
 
-
+// おすすめ・飲食
+Route::get('/food', [FoodController::class, 'index'])->name('food.index');
+Route::get('/food/create', [FoodController::class, 'create'])->name('food.create');
+Route::post('/food/store', [FoodController::class, 'store'])->name('food.store');
+Route::get('/food/detail', [FoodController::class, 'detail'])->name('food.detail');
 
 // お問い合わせ
 Route::group(['middleware' => 'clear.contact.session'], function () {
