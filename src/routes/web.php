@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\SceneryController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,4 +59,4 @@ Route::get('/scenery/create', [SceneryController::class, 'create'])->name('scene
 Route::post('/scenery/store', [SceneryController::class, 'store'])->name('scenery.store');
 Route::get('/scenery/detail', [SceneryController::class, 'detail'])->name('scenery.detail');
 
-// Food_Post.phpとScenery_Post.phpで共通のメソッドがあるので、まとめたい。リファクタの？（ちな他にも、フォームリクエスト等もそう）
+
