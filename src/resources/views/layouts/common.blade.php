@@ -33,7 +33,7 @@
                     <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">つぶやきのバイク</a></li>
                     <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">マスツーリングへ行こう</a></li>
                     <li class="drawerMenu-li"><a href="{{ route('food.index') }}" class="drawerMenu-link">おすすめの飲食</a></li>
-                    <li class="drawerMenu-li"><a href="#" class="drawerMenu-link">おすすめの風景</a></li>
+                    <li class="drawerMenu-li"><a href="{{ route('scenery.index') }}" class="drawerMenu-link">おすすめの風景</a></li>
                     <li class="drawerMenu-li"><a href="{{ route('contact') }}" class="drawerMenu-link">お問い合わせ</a></li>
                     @auth
                     <form action="{{ route('logout') }}" method="post" class="logout-form">

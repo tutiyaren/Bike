@@ -6,6 +6,7 @@ use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\SceneryController;
 
 
 /*
@@ -52,12 +53,10 @@ Route::get('/food/create', [FoodController::class, 'create'])->name('food.create
 Route::post('/food/store', [FoodController::class, 'store'])->name('food.store');
 Route::get('/food/detail', [FoodController::class, 'detail'])->name('food.detail');
 
-// お問い合わせ
-Route::group(['middleware' => 'clear.contact.session'], function () {
-    Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-    Route::post('/contact/confirmation', [ContactController::class, 'confirmation'])->name('contact.confirmation');
-    Route::post('/contact/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
-});
-
+// おすすめ・風景
+Route::get('/scenery', [SceneryController::class, 'index'])->name('scenery.index');
+Route::get('/scenery/create', [SceneryController::class, 'create'])->name('scenery.create');
+Route::post('/scenery/store', [SceneryController::class, 'store'])->name('scenery.store');
+Route::get('/scenery/detail', [SceneryController::class, 'detail'])->name('scenery.detail');
 
 

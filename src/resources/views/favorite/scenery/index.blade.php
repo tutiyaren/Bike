@@ -1,7 +1,7 @@
 @extends('layouts.common')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/favorite/food/index.css') }}">
+<link rel="stylesheet" href="{{ asset('css/favorite/scenery/index.css') }}">
 <link rel="stylesheet" href="{{ asset('css/paginate/paginate.css') }}">
 @endsection
 
@@ -11,15 +11,15 @@
 
     <!-- 投稿ページのリンク -->
     <div class="favorite-create">
-        <a href="{{ route('food.create') }}" class="favorite-create__link">おすすめの飲食を紹介する</a>
+        <a href="{{ route('scenery.create') }}" class="favorite-create__link">おすすめの風景を紹介する</a>
     </div>
 
     <!-- 検索・セレクト -->
-    <form method="get" class="searchSelect" id="foodSearchForm">
+    <form method="get" class="searchSelect" id="scenerySearchForm">
         @csrf
         <!-- 検索・エリア -->
         <div class="searchSelect-area">
-            <select name="area" id="food_area" class="searchSelect-area__select">
+            <select name="area" id="scenery_area" class="searchSelect-area__select">
                 <option value="">全てのエリア</option>
                 @foreach($areas as $area)
                 <option value="{{ $area->id }}" {{ request('area') == $area->id ? 'selected' : '' }}>{{ $area->area }}</option>
@@ -29,15 +29,14 @@
 
         <!-- 検索・ジャンル -->
         <div class="searchSelect-genre">
-            <select name="food_genre" id="food_genre" class="searchSelect-genre__select">
+            <select name="scenery_genre" id="scenery_genre" class="searchSelect-genre__select">
                 <option value="">全てのジャンル</option>
-                @foreach($foodGenres as $foodGenre)
-                <option value="{{ $foodGenre->id }}" {{ request('food_genre') == $foodGenre->id ? 'selected' : '' }}>{{ $foodGenre->genre }}</option>
+                @foreach($sceneryGenres as $sceneryGenre)
+                <option value="{{ $sceneryGenre->id }}" {{ request('scenery_genre') == $sceneryGenre->id ? 'selected' : '' }}>{{ $sceneryGenre->genre }}</option>
                 @endforeach
             </select>
         </div>
     </form>
-
 
     <!-- 検索・タイトル -->
     <form method="get" class="searchTitle">
@@ -52,21 +51,21 @@
 
     <!-- 投稿一覧 -->
     <div class="favorite-cards">
-        @foreach($foodPosts as $foodPost)
-        <div class="favorite-card" data-id="{{ $foodPost->id }}" data-title="{{ $foodPost->title }}" data-description="{{ $foodPost->content }}" data-area="{{ $foodPost->area->area }}" data-genre="{{ $foodPost->food_genre->genre }}" data-image="{{ asset('storage/' . $foodPost->image) }}" data-profile-image="{{ $foodPost->profile->profile_image ? asset($foodPost->profile->profile_image->my_image) : asset('/storage/center.jpg') }}" data-profile-name="{{ $foodPost->profile->nickname }}" data-profile-age="{{ $foodPost->profile->age->age }}" data-profile-genre="{{ $foodPost->profile->gender->gender }}">
+        @foreach($sceneryPosts as $sceneryPost)
+        <div class="favorite-card" data-id="{{ $sceneryPost->id }}" data-title="{{ $sceneryPost->title }}" data-description="{{ $sceneryPost->content }}" data-area="{{ $sceneryPost->area->area }}" data-genre="{{ $sceneryPost->scenery_genre->genre }}" data-image="{{ asset('storage/' . $sceneryPost->image) }}" data-profile-image="{{ $sceneryPost->profile->profile_image ? asset($sceneryPost->profile->profile_image->my_image) : asset('/storage/center.jpg') }}" data-profile-name="{{ $sceneryPost->profile->nickname }}" data-profile-age="{{ $sceneryPost->profile->age->age }}" data-profile-genre="{{ $sceneryPost->profile->gender->gender }}">
             <div class="favorite-card__top">
-                <img src="{{ asset('storage/' . $foodPost->image) }}" alt="投稿画像" class="favorite-card__image">
-                @foreach($foodPost->food_another_images as $anotherImage)
+                <img src="{{ asset('storage/' . $sceneryPost->image) }}" alt="投稿画像" class="favorite-card__image">
+                @foreach($sceneryPost->scenery_another_images as $anotherImage)
                 <img src="{{ asset('storage/' . $anotherImage->image) }}" alt="追加画像" class="favorite-card__image">
                 @endforeach
             </div>
-            <p class="favorite-card__title">{{ $foodPost->short_title }}</p>
+            <p class="favorite-card__title">{{ $sceneryPost->short_title }}</p>
         </div>
         @endforeach
     </div>
 
     <div class="pagination-container">
-        {{ $foodPosts->appends(request()->query())->links('vendor.pagination.default') }}
+        {{ $sceneryPosts->appends(request()->query())->links('vendor.pagination.default') }}
     </div>
 
     <!-- 各投稿詳細モーダル -->
@@ -100,7 +99,6 @@
         </div>
 
     </dialog>
-
 
 </div>
 
