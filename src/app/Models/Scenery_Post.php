@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Scenery_Post extends Model
 {
@@ -17,6 +18,32 @@ class Scenery_Post extends Model
         'content',
         'image'
     ];
+
+    public function scopeAreaSearch($query, $area)
+    {
+        if (!empty($area)) {
+            $query->where('area_id', $area);
+        }
+    }
+
+    public function scopeSceneryGenreSearch($query, $sceneryGenre)
+    {
+        if (!empty($sceneryGenre)) {
+            $query->where('scenery_genre_id', $sceneryGenre);
+        }
+    }
+
+    public function scopeTitleSearch($query, $keyword)
+    {
+        if (!empty($keyword)) {
+            $query->where('title', 'like', '%' . $keyword . '%');
+        }
+    }
+
+    public function getShortTitleAttribute()
+    {
+        return Str::limit($this->title, 28, '...');
+    }
 
     // Profileリレーション
     public function profile()
@@ -33,7 +60,7 @@ class Scenery_Post extends Model
     // Scenery_Genreリレーション
     public function scenery_genre()
     {
-        return $this->belongsTo(Scenery_Genre::class, 'genre_id');
+        return $this->belongsTo(Scenery_Genre::class, 'scenery_genre_id');
     }
 
     // Scenery_Another_Imageリレーション

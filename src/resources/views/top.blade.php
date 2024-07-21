@@ -60,7 +60,7 @@
                 </div>
                 <div class="menu-card__scenery">
                     <h2 class="menu-card__title">
-                        <a href="#" class="menu-card__link">風景</a>
+                        <a href="{{ route('scenery.index') }}" class="menu-card__link">風景</a>
                     </h2>
                 </div>
             </div>

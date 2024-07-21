@@ -66,9 +66,4 @@ class FoodController extends Controller
 
         return redirect()->route('food.index');
     }
-
-    public function detail()
-    {
-        return view('favorite.food.detail');
-    }
 }
